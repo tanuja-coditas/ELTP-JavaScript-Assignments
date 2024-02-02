@@ -100,8 +100,14 @@ console.log(sentence.repeat(3));
 
 // 25. 'Javascript is Easy, too Easy, too Easy, Easy to learn' Count the number of word 'Easy' in this sentence.
 sentence='Javascript is Easy, too Easy, too Easy, Easy to learn'
-console.log((sentence.match(/Easy/g)).length)
-
+let words = sentence.split(' ');
+let count = 0;
+for( let word in words)
+{
+    if(word.includes('Easy'))
+        count++;
+}
+console.log(count);
 
 // 26. Use match() to count the number of all 'Easy' in the following sentence:
 // 'Javascript is Easy, too Easy, too Easy, Easy to learn'
@@ -113,7 +119,7 @@ console.log((sentence.match(/Easy/g)).length)
 // 'I earn 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro from freelancing, 
 //and 50000 euro from trading'*/
  sentence = 'I earn 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro from freelancing,and 50000 euro from trading';
- let words = sentence.split(' ');
+  words = sentence.split(' ');
  ;
  let totalIncome =0;
  for(let word in words)
