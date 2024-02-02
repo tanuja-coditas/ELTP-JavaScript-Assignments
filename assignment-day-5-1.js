@@ -104,7 +104,7 @@ let words = sentence.split(' ');
 let count = 0;
 for( let word in words)
 {
-    if(word.includes('Easy'))
+    if(words[word].includes('Easy'))
         count++;
 }
 console.log(count);
